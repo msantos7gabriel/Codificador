@@ -10,17 +10,17 @@
 
 <body>
     <?php
-        require_once "class/encriptador.php";
+    require_once "class/encriptador.php";
     ?>
-    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-        <input type="tel" name="texto" id="texto" value="<?= $_POST['texto'] ?? null ?>">
+    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
+        <input type="tel" name="texto" id="texto" value="<?= $_GET['texto'] ?? null ?>">
         <input type="submit" value="Encriptar">
     </form>
     <?php
-        $e = new  encriptador($_POST['texto'] ?? null);
-        $e->encriptar();
+    $e = new  encriptador($_GET['texto'] ?? null);
+    $e->encriptar();
 
-        echo $e->getCodificado();
+
     ?>
 
 </body>
