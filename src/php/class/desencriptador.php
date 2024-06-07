@@ -68,6 +68,9 @@ class desencriptador
                 if ($contador == 28) {
                     $contador += 1;
                 }
+                if ($contador == 27) {
+                    $contador += 1;
+                }
                 $conversao[$y] = $letras[$contador - 1];
             }
             for ($i = 0; $i < sizeof($conversao); $i++) {
